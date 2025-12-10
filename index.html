@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyek Akhir CSS – Website Lengkap</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f3f3f3;line-height:1.5;}
+    .container{width:90%;max-width:1200px;margin:20px auto;}
+
+    /* HEADER */
+    header{background:#820004;color:white;padding:20px;border-radius:10px;
+      background-image:url('logo.png');background-repeat:no-repeat;
+      background-position:right;background-size:80px;}
+    header h1{text-align:left;}
+
+    /* NAVBAR */
+    .navbar{margin-top:15px;}
+    .navbar ul{list-style:none;overflow:hidden;background:#d10202;border-radius:8px;}
+    .navbar li{float:left;}
+    .navbar a{display:block;padding:15px;color:white;text-decoration:none;text-align:center;}
+    .navbar a:hover{background:#6b0101;}
+
+    /* GRID SYSTEM */
+    [class*="col-"]{float:left;padding:15px;}
+    [class*="col-"]{width:100%;}
+    @media(min-width:600px){.col-s-6{width:50%;}.col-s-4{width:33.33%;}.col-s-3{width:25%;}}
+    @media(min-width:768px){
+      .col-3{width:25%;}.col-4{width:33.33%;}.col-6{width:50%;}.col-12{width:100%;}
+    }
+    .row::after{content:"";display:block;clear:both;}
+
+    /* SECTION TITLE */
+    h2.section-title{margin:25px 0 10px;color:#333;}    
+
+    /* 1. BACKGROUND */
+    .bg-demo div{margin-bottom:10px;padding:20px;text-align:center;color:white;border-radius:6px;}
+    .bgcolor{background-color:#ff4533;}
+    .bgimage{background-image:url('batako.jpg');}
+    .bgposition{background:#820004 url('logo.png') no-repeat left center;height:150px;}
+    .gradient1{background:linear-gradient(to right,red,yellow,green);}    
+
+    /* 2. DIMENSION */
+    .layout-demo .box{background:white;border-radius:8px;padding:20px;text-align:center;}
+    .layout-header{height:100px;background:#820215;color:white;border-radius:8px;margin-bottom:10px;}
+    .layout-nav{height:200px;background:#002f42;color:white;border-radius:8px;margin-bottom:10px;}
+    .layout-content{background:white;border-radius:8px;padding:20px;}
+    .layout-footer{height:60px;background:#016060;color:white;border-radius:8px;margin-top:10px;}
+
+    /* 3. TEXT */
+    .maroon{color:#820004;} .navy{color:#05004c;} .indigo{color:#5D76CB;} 
+    .spacing{letter-spacing:2px;word-spacing:5px;line-height:22px;} 
+    .uppercase{text-transform:uppercase;} .lowercase{text-transform:lowercase;} .capitalize{text-transform:capitalize;}
+
+    /* 4. BORDER */
+    .btn{padding:10px;color:white;display:inline-block;margin:5px;border-radius:5px;}
+    .solid{border:4px solid black;} .dotted{border:4px dotted black;} .double{border:4px double black;}
+    .ridge{border:4px ridge;} .inset{border:4px inset;} .outset{border:4px outset;} .round{border-radius:20px;}
+
+    /* 5. POSITION */
+    .pos-container{width:100%;height:200px;overflow:auto;padding:10px;background:white;border-radius:10px;}
+    .static{position:static;border:2px solid green;margin-bottom:20px;padding:10px;}
+    .relative{position:relative;left:20px;border:2px solid red;margin-bottom:20px;padding:10px;}
+    .absolute{position:absolute;left:20px;top:200px;border:2px solid blue;padding:10px;background:white;}
+    .fixed{position:fixed;bottom:10px;right:10px;border:2px solid black;background:white;padding:10px;}
+    .sticky{position:sticky;top:0;background:#012051;color:white;padding:5px;border:2px solid yellow;margin-bottom:10px;}
+
+    /* 6. MULTIPLE COLUMN */
+    .news{column-count:2;column-gap:25px;column-rule:2px solid black;background:white;padding:15px;border-radius:10px;}
+
+    /* 7. IMAGE GALLERY */
+    .galeri{display:flex;flex-wrap:wrap;gap:15px;}
+    .galeri .card{width:200px;border:2px solid #ddd;border-radius:8px;overflow:hidden;background:white;text-align:center;}
+    .galeri img{width:100%;height:200px;object-fit:cover;}
+    .card:hover{border:2px solid black;}
+
+    /* 8. MEDIA QUERY DEMO */
+    .mq-box{padding:20px;background:red;color:white;border-radius:10px;text-align:center;}
+    @media(min-width:600px){.mq-box{background:lightgreen;color:black;}}
+    @media(min-width:768px){.mq-box{background:darkblue;color:white;}}
+
+    /* 9. RESPONSIVE ARTICLE */
+    .article{width:100%;padding:15px;background:#012051;color:white;border-radius:10px;column-count:3;column-gap:25px;column-rule:2px solid black;}
+    @media(max-width:768px){.article{column-count:2;background:#50011a;}}
+    @media(max-width:600px){.article{column-count:1;background:#00510c;}}
+
+    /* 10. RESPONSIVE TEMPLATE */
+    .sidebar ul{list-style:none;background:red;border-radius:8px;}
+    .sidebar ul li{border-bottom:2px solid #5e0001;}
+    .sidebar a{display:block;padding:15px;color:white;text-decoration:none;}
+    .footer{background:#5e0001;color:white;text-align:center;padding:15px;margin-top:20px;border-radius:10px;}
+
+    /* 11. RESPONSIVE FORM */
+    form{background:white;padding:20px;border-radius:10px;}
+    .form-control{width:100%;padding:10px;border:1px solid grey;border-radius:8px;margin:5px 0;}
+    button{background:darkblue;color:white;border:none;padding:10px 15px;border-radius:8px;float:right;margin-top:10px;}
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Proyek Akhir CSS – Website Lengkap Sesuai Modul</h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#bg">Background</a></li>
+      <li><a href="#dimension">Dimension</a></li>
+      <li><a href="#text">Text</a></li>
+      <li><a href="#border">Border</a></li>
+      <li><a href="#position">Position</a></li>
+      <li><a href="#grid">Grid & Responsive</a></li>
+      <li><a href="#article">Article</a></li>
+    </ul>
+  </nav>
+
+  <!-- BACKGROUND -->
+  <h2 id="bg" class="section-title">1. CSS Background</h2>
+  <div class="bg-demo">
+    <div class="bgcolor">Background Color</div>
+    <div class="bgimage">Background Image</div>
+    <div class="bgposition">Background Position</div>
+    <div class="gradient1">Gradient Background</div>
+  </div>
+
+  <!-- DIMENSION -->
+  <h2 id="dimension" class="section-title">2. CSS Dimension Layout</h2>
+  <div class="layout-demo">
+    <div class="layout-header">Header</div>
+    <div class="row">
+      <div class="col-3 col-s-6">
+        <div class="layout-nav">Navigasi</div>
+      </div>
+      <div class="col-9 col-s-6">
+        <div class="layout-content">Content Utama</div>
+      </div>
+    </div>
+    <div class="layout-footer">Footer</div>
+  </div>
+
+  <!-- TEXT -->
+  <h2 id="text" class="section-title">3. CSS Text</h2>
+  <p class="maroon">Teks warna maroon</p>
+  <p class="navy">Teks warna navy</p>
+  <p class="indigo">Teks warna indigo</p>
+  <p class="spacing">Contoh spacing pada teks (letter spacing, word spacing, line height)</p>
+  <p class="uppercase">teks uppercase</p>
+  <p class="lowercase">TEKS LOWERCASE</p>
+  <p class="capitalize">teks capitalized di setiap awal kata</p>
+
+  <!-- BORDER -->
+  <h2 id="border" class="section-title">4. CSS Border</h2>
+  <div>
+    <span class="btn solid" style="background:#fc0202">Solid</span>
+    <span class="btn dotted" style="background:#02496d">Dotted</span>
+    <span class="btn ridge" style="background:#338401">Ridge</span>
+    <span class="btn double" style="background:#fc0202">Double</span>
+    <span class="btn inset" style="background:#02496d">Inset</span>
+    <span class="btn outset" style="background:#338401">Outset</span>
+  </div>
+
+  <!-- POSITION -->
+  <h2 id="position" class="section-title">5. CSS Position</h2>
+  <div class="pos-container">
+    <p class="sticky">Ini sticky</p>
+    <p class="static">Ini static</p>
+    <p class="relative">Ini relative</p>
+    <p class="absolute">Ini absolute</p>
+    <p class="fixed">Ini fixed</p>
+  </div>
+
+  <!-- MULTIPLE COLUMN -->
+  <h2 class="section-title">6. Multiple Column</h2>
+  <div class="news">
+    <p>Lorem ipsum dolor sit amet...</p>
+    <p>It is a long established fact...</p>
+  </div>
+
+  <!-- IMAGE GALLERY -->
+  <h2 class="section-title">7. Image Gallery</h2>
+  <div class="galeri">
+    <div class="card"><img src="soeharto.jpg"><div class="caption">Soeharto</div></div>
+    <div class="card"><img src="habibi.jpg"><div class="caption">BJ Habibie</div></div>
+    <div class="card"><img src="gusdur.jpg"><div class="caption">Gus Dur</div></div>
+    <div class="card"><img src="sby.jpg"><div class="caption">SBY</div></div>
+    <div class="card"><img src="jokowi.jpg"><div class="caption">Joko Widodo</div></div>
+  </div>
+
+  <!-- MEDIA QUERY DEMO -->
+  <h2 class="section-title">8. Media Query Demo</h2>
+  <div class="mq-box">Resize layar untuk melihat perubahan warna</div>
+
+  <!-- RESPONSIVE ARTICLE -->
+  <h2 id="article" class="section-title">9. Responsive Article</h2>
+  <div class="article">
+    <p>Lorem ipsum dolor sit amet...</p>
+    <p>It is a long established fact...</p>
+    <p>Contrary to popular belief...</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">&copy; 2025 – Proyek Akhir CSS Berdasarkan Modul</div>
+
+</div>
+</body>
+</html>
