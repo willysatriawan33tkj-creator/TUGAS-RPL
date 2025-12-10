@@ -1,47 +1,64 @@
-/* Background keseluruhan */
-body {
-    background-color: #247b9e;
-    margin: 0;
-    font-family: Arial, sans-serif;
+body{
+font-family: Arial, sans-serif;
+background:#f5f5f5;
+margin:0;
+padding:0;
 }
 
-/* Container utama */
-div.container {
-    margin: 0 auto;      /* tengah */
-    width: 90%;          /* lebar 90% */
+
+header{
+background:#4f46e5;
+padding:16px;
+color:white;
+text-align:center;
+font-size:20px;
+font-weight:600;
 }
 
-/* Header */
-header {
-    width: 100%;
-    height: 100px;
-    background-color: #820;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    box-sizing: border-box;
+
+.container{
+max-width:900px;
+margin:20px auto;
+padding:16px;
+background:white;
+border-radius:8px;
+border:1px solid #ddd;
 }
 
-/* Box contoh dimension */
-.box {
-    width: 80%;
-    height: auto;
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
+
+h2{
+margin-bottom:8px;
 }
 
-/* Footer */
-footer {
-    width: 100%;
-    height: 70px;
-    background-color: #333;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+
+p{
+color:#555;
+line-height:1.5;
+}
+
+
+.card-wrap{
+display:flex;
+gap:16px;
+margin-top:16px;
+flex-wrap:wrap;
+}
+
+
+.card{
+flex:1;
+min-width:200px;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+background:#fafafa;
+}
+
+
+footer{
+text-align:center;
+padding:16px;
+margin-top:20px;
+color:#666;
+font-size:14px;
 }
